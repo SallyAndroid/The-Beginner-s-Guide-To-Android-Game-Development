@@ -1,0 +1,43 @@
+
+public class World {
+	
+	public static void main(String[] args){
+		System.out.println("Hellp,world!");
+	}
+}
+
+
+public class Phone {
+
+    boolean poweredOn;
+    boolean playingMusic;
+    String phoneManufacturer = "Samsung";
+    double androidVersionNumber = 4.4;
+
+    void togglePower(){
+        if(poweredOn){
+            System.out.println("Powering off!");
+            poweredOn = false;
+            playingMusic = false;
+        } else {
+            System.out.println("Powering on!");
+            poweredOn = true;
+        }
+    }
+
+    void playMusic(){
+        if(poweredOn){
+            System.out.println("Playing misuc!");
+            playingMusic = true;
+        }
+    }
+
+    void upgrade(double newVersion){
+        if(newVersion > androidVersionNumber){
+            androidVersionNumber = newVersion;
+        } else {
+            System.out.println("Upgrade failed!");
+        }
+    }
+
+}
