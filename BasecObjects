@@ -3,6 +3,7 @@ public class World {
 	
 	public static void main(String[] args){
 		System.out.println("Hellp,world!");
+		Phone myPhone = new Phone();
 	}
 }
 
