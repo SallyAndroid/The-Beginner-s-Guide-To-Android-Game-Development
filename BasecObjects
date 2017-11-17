@@ -4,6 +4,10 @@ public class World {
 	public static void main(String[] args){
 		System.out.println("Hellp,world!");
 		Phone myPhone = new Phone();
+		myPhone.poweredOn = true;
+		myPhone.playingMusic = false;
+		myPhone.phoneManufacturer = "Samsung";
+		myPhone.androidVersionNumber = 4.4;
 	}
 }
 
