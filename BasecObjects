@@ -8,6 +8,12 @@ public class World {
 		myPhone.playingMusic = false;
 		myPhone.phoneManufacturer = "Samsung";
 		myPhone.androidVersionNumber = 4.4;
+		
+		System.out.println("myPhone's state:");
+		System.out.println("Powered on: " + myPhone.poweredOn);
+		System.out.println("Playing music: " + myPhone.playingMusic);
+		System.out.println("Manufacturer: " + myPhone.phoneManufacturer);
+		System.out.println("Version: " + myPhone.androidVersionNumber);
 	}
 }
 
