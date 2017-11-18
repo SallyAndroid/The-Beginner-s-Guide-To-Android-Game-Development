@@ -4,35 +4,19 @@ public class World {
 	public static void main(String[] args){
 		System.out.println("Hellp,world!");
 		Phone myPhone = new Phone();
-		myPhone.poweredOn = true;
-		myPhone.playingMusic = false;
-		myPhone.phoneManufacturer = "Samsung";
-		myPhone.androidVersionNumber = 4.4;
-		
-		System.out.println("myPhone's state:");
-		System.out.println("Powered on: " + myPhone.poweredOn);
-		System.out.println("Playing music: " + myPhone.playingMusic);
-		System.out.println("Manufacturer: " + myPhone.phoneManufacturer);
-		System.out.println("Version: " + myPhone.androidVersionNumber);
 		
 		myPhone.togglePower();
 		myPhone.upgrade(4.5);
-		
-		System.out.println("\nmyPhone's NEW state:");
-		System.out.println("Powered on: " + myPhone.poweredOn);
-		System.out.println("Playing music: " + myPhone.playingMusic);
-		System.out.println("Manufacturer: " + myPhone.phoneManufacturer);
-		System.out.println("Version: " + myPhone.androidVersionNumber);
 	}
 }
 
 
 public class Phone {
 
-    boolean poweredOn;
-    boolean playingMusic;
-    String phoneManufacturer = "Samsung";
-    double androidVersionNumber = 4.4;
+    private boolean poweredOn;
+    private boolean playingMusic;
+    private String phoneManufacturer = "Samsung";
+    private double androidVersionNumber = 4.4;
 
     void togglePower(){
         if(poweredOn){
