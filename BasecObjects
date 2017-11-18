@@ -4,9 +4,11 @@ public class World {
 	public static void main(String[] args){
 		System.out.println("Hellp,world!");
 		Phone myPhone = new Phone();
-		
+		myPhone.initialize(false,"Samsung");
+		myPhone.describe();
 		myPhone.togglePower();
 		myPhone.upgrade(4.5);
+		myPhone.describe();
 	}
 }
 
@@ -14,10 +16,18 @@ public class World {
 public class Phone {
 
     private boolean poweredOn;
-    private boolean playingMusic;
+    private boolean playingMusic = false;
     private String phoneManufacturer = "Samsung";
     private double androidVersionNumber = 4.4;
 
+    //将变量poweredOn和phoneManufacturer初始化
+    void initialize(boolean poweredOn ,String phoneManufacturer){
+    	//使用this关键字让程序知道，我们引用的是对象的这个实例，即我们在其上调用initialize()方法的当前Phone对象。
+	//这就是我们如何区分属于对象的poweredOn变量和属于方法（通过参数而接受）的 poweredOn变量。
+	this.poweredOn = poweredOn;
+	this.phoneManufacturer = phoneManufacturer;
+    }
+    
     void togglePower(){
         if(poweredOn){
             System.out.println("Powering off!");
@@ -43,5 +53,12 @@ public class Phone {
             System.out.println("Upgrade failed!");
         }
     }
-
+    
+    void describe(){
+    	System.out.println("\nPhone's state:");
+	System.out.println("Powered on: " + poweredOn);
+	System.out.println("Playing music: " + playingMusic);
+	System.out.println("Manufacturer: " + phoneManufacturer);
+	System.out.println("Version: " + androidVersionNumber);
+    }
 }
